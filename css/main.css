@@ -1,0 +1,405 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+
+body {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    letter-spacing: 1px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+}
+
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index:3;
+    background-color: rgba(0,0,0,0.4);    
+}
+
+.slides-navigation {
+    z-index: 6;
+}
+
+.slides-navigation .next, .slides-navigation .prev {
+    width: 47px;
+    height: 47px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.slides-navigation a.next {
+    right: 20px;
+    background-image: url("../images/icons/next.png");
+}
+
+.slides-navigation a.prev {
+    left: 20px;
+    background-image: url("../images/icons/prev.png");  
+}
+
+.title {
+    position: absolute;
+    width: 100%;
+    height: 250px;
+    top: 50%;
+    z-index: 5;
+    text-align: center;
+    margin-top: -135px;
+}
+
+.heading .main, .heading .sub {
+    color: #fff;
+    text-shadow: 0px 2px 5px rgba(0,0,0,0.4);
+    
+    letter-spacing: 7px;
+}
+
+.main {
+    font-size: 50px;
+    font-weight: 100;
+    animation: tracking-in-expand 2s 1.5s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+
+.sub {
+ 
+    background-color: rgba(118, 122, 118, 0.15);
+    
+    
+}
+
+@keyframes tracking-in-expand {
+    0% {
+        letter-spacing: -0.5em;
+        -webkit-transform: translateZ(-700px) translateY(-500px);
+                transform: translateZ(-700px) translateY(-500px);
+        opacity: 0;
+      }
+      40% {
+        opacity: 0.6;
+      }
+      100% {
+        -webkit-transform: translateZ(0) translateY(0);
+                transform: translateZ(0) translateY(0);
+        opacity: 1;
+      }
+    }
+.section {
+    padding: 100px 0;
+}        
+
+.aboutImage {
+    max-width: 100%;
+}
+
+h4 img {
+    padding-bottom: 10px;
+}
+
+.skillsSection, #contact {
+    background: linear-gradient(to right, #FFFFFF, #6DD5FA, #FFFFFF); 
+}
+
+.skill {
+    text-align: center;
+    margin-left: 10px;
+}
+
+.chart {
+    position: relative;
+    width: 152px;
+    height: 152px;
+    display: inline-block;
+    text-align: center;
+}
+
+.chart canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.chart .percent {
+    color: black;
+    line-height: 152px;
+    display: inline-block;
+    font-size: 40px;
+}
+
+.chart .percent::after {
+    content: '%';
+}
+
+.squareItem {
+    margin-top: 30px;
+    position: relative;
+}
+
+.squareInnerContainer {
+    position: relative;
+    padding: 50px 15px 35px;
+    text-align: center;
+    border: 2px solid #444;
+    border-top: none;
+}
+
+/* use BEFORE and AFTER pseudo's to create 2 content objects that will be laoded before and after element */
+
+.squareInnerContainer::before, .squareInnerContainer::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 30%; /* 1/3 of element wide flat create a line that can then be moved */
+    border-bottom: 2px solid #444;
+}
+
+.squareInnerContainer::before {
+    right: 0; /* move flat line to left */
+}
+
+.squareInnerContainer::after {
+    left: 0; /* move flat line to right */
+}
+
+.squareContent h2{
+    font-size: 56px;
+    margin-bottom: 10px;
+    font-weight: 400;
+    color: #ee5253;
+}
+
+.squareContent h3{
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.squareIcon{
+    position: absolute;
+    left: 50%;
+    top: -15%;
+    width: 40%;
+    height: 60px;
+    margin-left: -20%;
+    color: #444;
+}
+
+.fa::before {
+    content:"\f0b1";
+    font-size:60px;
+}
+
+.contactButton {
+    color: #fff;
+    padding: 15px 20px;
+    display: inline-block;
+    margin-top: 20px;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    background: linear-gradient(to right, #8e2de2, #4a00e0); 
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.contactButton:hover {
+    text-decoration: none;
+    color: #fff;
+    background: linear-gradient(to right, #f12711, #f5af19);
+}
+
+.filter {
+    text-align: center;
+    width: 100%;
+}
+
+.section .heading {
+    text-align: center;
+    padding-bottom: 40px;
+    width: 100%;
+}
+
+.filter a {
+    color: gray;
+    border: 1px solid gray;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+}
+
+.filter li {
+    display: inline-block;
+    padding: 5px;
+    
+}
+
+.filter .current {
+    background-color: red;
+    border-color: red;
+    color: #fff;
+}
+
+.items li {
+    display: inline-block;
+    padding: 5px;
+}
+
+.itemsContainer {
+    width: 100%;
+}
+
+.items li img {
+    width: 100%;
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    transition: all 0.2s linear, 1s;
+}
+
+.items .item {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+
+.icons {
+    position: absolute;
+    width: 90px;
+    height: 30px;
+    left: 50%;
+    top: 50%;
+    margin: -30px auto 10px -47px;
+    text-align: center;
+    z-index: 3;
+}
+
+
+
+.fa::before {
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.items a {
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    position: relative;
+    display: inline-block;
+    padding: 5px 0;
+    -webkit-transition: all 0.2s linear, .2s;
+    -moz-transition: all 0.2s linear, .2s;
+    -o-transition: all 0.2s linear, .2s;
+    -ms-transition: all 0.2s linear, .2s;
+    transition: all 0.2s linear, .2s;
+}
+
+.items .imageOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    -webkit-transition: all 0.2s linear, 1s;
+    -moz-transition: all 0.2s linear, 1s;
+    -o-transition: all 0.2s linear, 1s;
+    -ms-transition: all 0.2s linear, 1s;
+    transition: all 0.2s linear, 1s;
+}    
+
+.items .item:hover .imageOverlay {
+    opacity: 1;
+}
+
+.items .openButton {
+    float: left;
+    left: -200px;
+}
+
+.items .projectLink {
+    float: right;
+    right: -200px;
+}
+
+
+.items .item:hover .openButton {
+    left: 0;
+}
+
+.items .item:hover .projectLink {
+    right: 0;
+}
+
+.items .item:hover img {
+    -webkit-transform: scale(1.05,1.05);
+    -moz-transform:scale(1.05,1.05);
+    -o-transfrom:scale(1.05,1.05);
+    -ms-transfrom: scale(1.05,1.05);
+    transform: scale(1.05,1.05);
+}
+
+.items {
+    padding: 0;
+}
+
+.copyrightSection {
+    background-color: black;
+    color: white;
+    padding: 30px 5px;
+}
+
+.copyrightSection p {
+    margin: 0;
+}
+
+#navigation {
+    background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+    padding: 10px 5px;
+    z-index: 100;
+    width: 100%;
+}
+
+#navigation li a{
+    padding: 5px 10px;
+    color: white;
+    font-size: 20px;
+}
+
+.navbar-brand, .navbar-brand:hover {
+    color: #fff;
+}
+
+.navbar-toggler-icon {
+    background: url('../images/icons/menu.png');
+    background-size: 100%;
+    color: black;
+}
+
+.fixedNav #navigation {
+    position: fixed;
+    top: 0;
+}
+
+.loader {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.loader .inner {
+    width: 100%;
+    height: 100%;
+    background: url('../images/icons/loader.gif') center center no-repeat;
+}
